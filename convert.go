@@ -6,7 +6,7 @@ import (
 )
 
 func convert_base_hex(numex string) string {
-	number, err := strconv.Atoi(numex)
+	number, err := strconv.ParseInt(numex, 16, 64)
 	if err != nil {
 		fmt.Println("erreur de conversion", err)
 		return ""
