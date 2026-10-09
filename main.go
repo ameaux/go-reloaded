@@ -1,4 +1,4 @@
-package piscine
+package main
 
 func main() {
 	correction := parcours("test.txt")
