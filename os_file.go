@@ -5,13 +5,14 @@ import (
 	"os"
 )
 
-func open_file(file string) {
+func open_file(file string) error {
 	fichier, err := os.Open(file)
 	if err != nil {
 		fmt.Println("erreur d'ouverture", err)
-		return
+		return err
 	}
 	defer fichier.Close()
+	return nil
 }
 
 func return_file(text string) string {
